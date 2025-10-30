@@ -2,8 +2,6 @@
 
 Build with the latest Openwrt kernels and the latest mtk-openwrt-feeds...
 
-This is my latest build script which incorperates the "rsync" function to improve the handling of scripts and patches. I've also include a new option to clone the main repos from a local repo. 
-
 ## **To build with the latest kernel and mtk-openwrt-feeds**
 
 1. You can change branches "openwrt-24.10" , "master" , "main" etc...
@@ -59,39 +57,19 @@ This is my latest build script which incorperates the "rsync" function to improv
 ### **For latest compiled bpi-r4 sysupgradeb/sdcard images can be downloaded from mediafire..**
 
 Images with the eeprom patch applied..
-Images for BE14 with the eeprom issue - https://www.mediafire.com/file/x7jp6aevujjf4g4/BPI_R4_Images-with-eeprom-fix-11.10.2025.zip
+Images for BE14 with the eeprom issue - https://www.mediafire.com/file/8jgccnqa04wj3bd/BPI_R4_Images-with-eeprom-fix-30.10.2025.zip
 
 Standard images with no eeprom patched..
 Images for BE14 without the eeprom issue - https://www.mediafire.com/file/gs22825btuqkx1h/BPI_R4_Images-with-no-eeprom-fix-11.10.2025.zip
 
 ## **Notes**
 
-Add new db patched which adds the "wmmrule=ETSI" rule to all countries that have a valide 6GHz entry.
+Add new 0133-mtk-mt76-mt7996-fix-kernel-6.6.110-EEPROM-0s.patch.
 
-I will no longer be making patches for the duplicated ports issue. The updated script now handles this automatically during the build process and a patch is no longer need when using this script. (hopefully a permanent fix will come from MediaTek)
+To adjust the tx power values you also need to add sku_idx '0' to your wireless config 
 
-The current bug and setting the tx power value is still causing the 255 dBm (2147483647 mW) value to populate into the drop down menu. This bug also effects BE14 cards with good eeproms as well, not just the cards that contain 0s.
-
-Experimental patch for the BE14 cards with the 0'd eeproms - I've extracted the eeprom.bin from my good BE14 card which this new test patch uses instead of the default fallback .bin that comes with the default dirvers. From my initial testing I'm able to correctly set the tx power value on all three raido's.
-
-Script is updated to compile the new patch, if you don't need it then just remove the relevant entries from the openwrt-add-patch and mtk-add-patch files.
-
-If you want to test this new patch without using this script.. 
-
-1. bpi-r4-eeprom.bin
-	 * mkdir -p openwrt/package/firmware/bpi-r4-eeprom-data/files
-	 * cp openwrt/package/firmware/bpi-r4-eeprom-data/files/bpi-r4-eeprom.bin
-
-2. epprom.bin_Makefile
-	 * rename "epprom.bin_Makefile to Makefile
-	 * cp openwrt/package/firmware/bpi-r4-eeprom-data/Makefile
-
-3. 0131-mtk-mt76-mt7996-fix-kernel-6.106-EEPROM-0s-bin.patch
-	 * cp autobuild/unified/filogic/mac80211/24.10/files/package/kernel/mt76/patches/0131-mtk-mt76-mt7996-fix-kernel-6.106-EEPROM-0s-bin.patch
-
-4. CONFIG_PACKAGE_bpi-r4-eeprom-data=y
-	 * Add "CONFIG_PACKAGE_bpi-r4-eeprom-data=y" into your defconfig before compiling.
-
-5. To set tx power value add sku_idx to wireless config e.g. config wifi-device 'radio0'
+config wifi-device 'radio0'
 	 * option sku_idx '0'
+
+The `255 dBm (2147483647 mW)` bug is still not resolved and still populating into the drop down menu when changing wifi settings in luci. This bug is also preset on other platforms using 3 radios, which points to a bug within iwinfo and how it now handles three radios on the one`phy0` using `idx` for mlo.
 
