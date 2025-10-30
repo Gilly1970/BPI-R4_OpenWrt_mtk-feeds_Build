@@ -64,11 +64,12 @@ Images for BE14 without the eeprom issue - https://www.mediafire.com/file/gs2282
 
 ## **Notes**
 
-Add new 0133-mtk-mt76-mt7996-fix-kernel-6.6.110-EEPROM-0s.patch.
+Updated 0133-mtk-mt76-mt7996-fix-kernel-6.6.110-EEPROM-0s.patch.
 
 To adjust the tx power values you also need to add sku_idx '0' to your wireless config 
 
 config wifi-device 'radio0'
+
 	 * option sku_idx '0'
 
 The `255 dBm (2147483647 mW)` bug is still not resolved and still populating into the drop down menu when changing wifi settings in luci. This bug is also preset on other platforms using 3 radios, which points to a bug within iwinfo and how it now handles three radios on the one`phy0` using `idx` for mlo.
