@@ -60,7 +60,7 @@ Images with the eeprom patch applied..
 Images for BE14 with the eeprom issue - https://www.mediafire.com/file/8jgccnqa04wj3bd/BPI_R4_Images-with-eeprom-fix-30.10.2025.zip
 
 Standard images with no eeprom patched..
-Images for BE14 without the eeprom issue - https://www.mediafire.com/file/gs22825btuqkx1h/BPI_R4_Images-with-no-eeprom-fix-11.10.2025.zip
+Images for BE14 without the eeprom issue - https://www.mediafire.com/file/1mm6an35fk4aqvy/BPI_R4_Images-with-no-eeprom-fix-30.10.2025.zip
 
 ## **Notes**
 
@@ -72,5 +72,5 @@ config wifi-device 'radio0'
 
 	 * option sku_idx '0'
 
-The `255 dBm (2147483647 mW)` bug is still not resolved and still populating into the drop down menu when changing wifi settings in luci. This bug is also preset on other platforms using 3 radios, which points to a bug within iwinfo and how it now handles three radios on the one`phy0` using `idx` for mlo.
+The `255 dBm (2147483647 mW)` bug is still not resolved and still populating into the drop down menu when changing wifi settings in luci. This bug is also present on other platforms using 3 radios, which points to a bug within iwinfo and how it now handles three radios on the one`phy0` using `idx` for mlo.
 
