@@ -57,10 +57,10 @@ Build with the latest Openwrt kernels and the latest mtk-openwrt-feeds...
 ### **For latest compiled bpi-r4 sysupgradeb/sdcard images can be downloaded from mediafire..**
 
 Images with the eeprom patch applied..
-Images for BE14 with the eeprom issue - https://www.mediafire.com/file/g5ll9xo86dp4paf/BPI_R4_Images-with-eeprom-fix-16.11.2025.zip
+Images for BE14 with the eeprom issue - https://www.mediafire.com/file/b53vyylkk3y4jfd/BPI_R4_Images-with-eeprom-fix-14.12.2025.zip
 
 Standard images with no eeprom patched..
-Images for BE14 without the eeprom issue - https://www.mediafire.com/file/b6kqraefo454lj1/BPI_R4_Images-with-no-eeprom-fix-16.11.2025.zip
+Images for BE14 without the eeprom issue - https://www.mediafire.com/file/mvlbc03e4e1einm/BPI_R4_Images-with-no-eeprom-fix-14.12.2025.zip
 
 ## **Notes**
 
