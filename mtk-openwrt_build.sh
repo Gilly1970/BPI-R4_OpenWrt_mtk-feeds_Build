@@ -35,7 +35,7 @@ fi
 # --- Use this line for remote cloning ---
 readonly OPENWRT_REPO="https://git.openwrt.org/openwrt/openwrt.git"
 # --- Use this line for local testing (uncomment and set your path) ---
-#readonly OPENWRT_REPO="/home/user/repo/24.10/openwrt"
+#readonly OPENWRT_REPO="/home/user/repos/openwrt"
 
 OPENWRT_BRANCH="openwrt-24.10"
 readonly OPENWRT_COMMIT=""
@@ -44,7 +44,7 @@ readonly OPENWRT_COMMIT=""
 # --- Use this line for remote cloning ---
 readonly MTK_FEEDS_REPO="https://git01.mediatek.com/openwrt/feeds/mtk-openwrt-feeds"
 # --- Use this line for local testing (uncomment and set your path) ---
-#readonly MTK_FEEDS_REPO="/home/user/repo/24.10/mtk-openwrt-feeds"
+#readonly MTK_FEEDS_REPO="/home/user/repos/mtk-openwrt-feeds"
 
 readonly MTK_FEEDS_BRANCH="master"
 readonly MTK_FEEDS_COMMIT=""
