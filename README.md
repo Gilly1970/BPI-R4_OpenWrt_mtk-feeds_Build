@@ -57,14 +57,12 @@ Build with the latest Openwrt kernels and the latest mtk-openwrt-feeds...
 ### **For latest compiled bpi-r4 sysupgradeb/sdcard images can be downloaded from mediafire..**
 
 Images with the eeprom patch applied..
-Images for BE14 with the eeprom issue - https://www.mediafire.com/file/b53vyylkk3y4jfd/BPI_R4_Images-with-eeprom-fix-14.12.2025.zip
+Images for BE14 with the eeprom issue - https://www.mediafire.com/file/uh9iiv2rt5lb2uu/BPI_R4_Images-with-eeprom-fix-13.01.2026.zip
 
 Standard images with no eeprom patched..
-Images for BE14 without the eeprom issue - https://www.mediafire.com/file/mvlbc03e4e1einm/BPI_R4_Images-with-no-eeprom-fix-14.12.2025.zip
+Images for BE14 without the eeprom issue - https://www.mediafire.com/file/ljuv2uj7eo6v9f4/BPI_R4_Images-with-no-eeprom-fix-13.01.2026.zip
 
 ## **Notes**
-
-Updated 0133-mtk-mt76-mt7996-fix-kernel-6.6.110-EEPROM-0s.patch.
 
 To adjust the tx power values you also need to add sku_idx '0' to your wireless config 
 
