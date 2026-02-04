@@ -64,6 +64,10 @@ Images for BE14 without the eeprom issue - https://www.mediafire.com/file/ljuv2u
 
 ## **Notes**
 
+ - 05.02.2026 - Updated Script to replce 'https:' with 'git:' during the update feeds process.. Changing to git: helps with the curent DDos attack on https://git.openwrt.org the last week or so.
+
+    - Added updated EPROM-0s patch as well.
+	
 To adjust the tx power values you also need to add sku_idx '0' to your wireless config 
 
 config wifi-device 'radio0'
