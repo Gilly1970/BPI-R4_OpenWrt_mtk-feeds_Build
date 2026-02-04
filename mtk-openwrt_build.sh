@@ -351,6 +351,10 @@ main() {
         if ! grep -q "src-link mtk" feeds.conf.default; then
             echo "src-link mtk ../$MTK_FEEDS_DIR" >> feeds.conf.default
         fi
+		log "Applying protocol fixes to feeds.conf.default..."
+        sed -i 's|https://git.openwrt.org|git://git.openwrt.org|g' feeds.conf.default
+        sed -i '/video/s|git://|https://|g' feeds.conf.default
+		
         log "Updating and installing feeds to prepare the source tree..."
         ./scripts/feeds update -a
         ./scripts/feeds install -a
