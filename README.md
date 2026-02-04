@@ -74,5 +74,3 @@ config wifi-device 'radio0'
 
 	 * option sku_idx '0'
 
-The `255 dBm (2147483647 mW)` bug is still not resolved and still populating into the drop down menu when changing wifi settings in luci. This bug is also present on other platforms using 3 radios, which points to a bug within iwinfo and how it now handles three radios on the one`phy0` using `idx` for mlo.
-
